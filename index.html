@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camaçari na Mão — PoC Visualização Territorial</title>
+
+  <!--
+    PoC — Camaçari na Mão
+    Plataforma de Apoio à SEDUR | Camaçari, BA, 2026
+    Desenvolvido como prova de conceito de visualização georreferenciada de denúncias urbanas.
+  -->
+
+  <!-- Leaflet CSS (mapa base) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+
+  <!-- MarkerCluster CSS (agrupamento de pontos) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+    crossorigin=""
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+    crossorigin=""
+  />
+
+  <!-- Estilos próprios da PoC -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       CABEÇALHO COM TÍTULO E FILTRO
+  ============================================== -->
+  <header>
+
+    <!-- Identidade do app -->
+    <div class="header-title">
+      <div class="logo">🗺️</div>
+      <h1>
+        Camaçari na Mão
+        <span>PoC · Visualização de Denúncias Urbanas · SEDUR</span>
+      </h1>
+    </div>
+
+    <!-- Filtro por tipo de denúncia -->
+    <div class="filter-bar">
+      <label for="filtro-tipo">Filtrar por tipo:</label>
+      <select id="filtro-tipo">
+        <option value="">Todos os tipos</option>
+        <!-- Preenchido dinamicamente pelo script.js -->
+      </select>
+    </div>
+
+    <!-- Contador de ocorrências exibidas -->
+    <div id="contador-resultados">Carregando...</div>
+
+  </header>
+
+
+  <!-- =============================================
+       LAYOUT PRINCIPAL: PAINEL + MAPA
+  ============================================== -->
+  <div class="main-layout">
+
+    <!-- Painel lateral de insights -->
+    <aside class="painel-lateral">
+
+      <!-- Card: total geral -->
+      <div>
+        <h2>📊 Resumo Geral</h2>
+        <div class="card-total" style="margin-top: 8px;">
+          <div class="numero" id="total-ocorrencias">—</div>
+          <div class="label">Ocorrências registradas</div>
+        </div>
+      </div>
+
+      <!-- Insight: contagem por tipo -->
+      <div>
+        <h2>📌 Por Tipo de Denúncia</h2>
+        <div id="insight-tipos" style="display: flex; flex-direction: column; gap: 6px; margin-top: 6px;">
+          <!-- Preenchido dinamicamente pelo script.js -->
+        </div>
+      </div>
+
+      <!-- Insight: contagem por bairro -->
+      <div>
+        <h2>🏘️ Por Bairro</h2>
+        <div id="insight-bairros" style="display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+          <!-- Preenchido dinamicamente pelo script.js -->
+        </div>
+      </div>
+
+      <!-- Legenda de cores -->
+      <div>
+        <h2>🔵 Legenda</h2>
+        <div id="legenda-cores" style="display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
+          <!-- Preenchido dinamicamente pelo script.js -->
+        </div>
+      </div>
+
+      <!-- Rodapé do painel -->
+      <div style="font-size: 10px; color: #aaa; text-align: center; padding-top: 6px; border-top: 1px solid #eee; margin-top: auto;">
+        Dados simulados · PoC 2026<br>Prefeitura de Camaçari / SEDUR
+      </div>
+
+    </aside>
+
+    <!-- Mapa principal (Leaflet renderiza aqui) -->
+    <div id="map"></div>
+
+  </div>
+
+
+  <!-- =============================================
+       SCRIPTS (carregados ao final)
+  ============================================== -->
+
+  <!-- Leaflet JS (biblioteca de mapas) -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+
+  <!-- MarkerCluster JS (agrupamento de pontos) -->
+  <script
+    src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
+    crossorigin=""
+  ></script>
+
+  <!-- Lógica principal da PoC -->
+  <script src="script.js"></script>
+
+</body>
+</html>

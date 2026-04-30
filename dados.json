@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "tipo": "Obra irregular",
+    "bairro": "Centro",
+    "descricao": "Construção sem alvará na Rua das Flores",
+    "latitude": -12.6985,
+    "longitude": -38.3239,
+    "data": "2026-03-10",
+    "status": "Aberta"
+  },
+  {
+    "id": 2,
+    "tipo": "Poluição sonora",
+    "bairro": "Centro",
+    "descricao": "Bar com som alto após meia-noite",
+    "latitude": -12.6971,
+    "longitude": -38.3255,
+    "data": "2026-03-15",
+    "status": "Aberta"
+  },
+  {
+    "id": 3,
+    "tipo": "Terreno abandonado",
+    "bairro": "Miragem",
+    "descricao": "Terreno com mato alto e acúmulo de lixo",
+    "latitude": -12.7010,
+    "longitude": -38.3300,
+    "data": "2026-02-20",
+    "status": "Em análise"
+  },
+  {
+    "id": 4,
+    "tipo": "Descarte irregular de lixo",
+    "bairro": "Miragem",
+    "descricao": "Entulho despejado em via pública",
+    "latitude": -12.7025,
+    "longitude": -38.3280,
+    "data": "2026-03-01",
+    "status": "Aberta"
+  },
+  {
+    "id": 5,
+    "tipo": "Obra irregular",
+    "bairro": "Abrantes",
+    "descricao": "Ampliação de galpão sem licença",
+    "latitude": -12.6890,
+    "longitude": -38.3100,
+    "data": "2026-01-18",
+    "status": "Encerrada"
+  },
+  {
+    "id": 6,
+    "tipo": "Poluição sonora",
+    "bairro": "Abrantes",
+    "descricao": "Oficina mecânica com barulho excessivo",
+    "latitude": -12.6875,
+    "longitude": -38.3120,
+    "data": "2026-03-22",
+    "status": "Aberta"
+  },
+  {
+    "id": 7,
+    "tipo": "Ocupação irregular",
+    "bairro": "Abrantes",
+    "descricao": "Edificação em área de preservação",
+    "latitude": -12.6855,
+    "longitude": -38.3090,
+    "data": "2026-02-05",
+    "status": "Em análise"
+  },
+  {
+    "id": 8,
+    "tipo": "Terreno abandonado",
+    "bairro": "Nova Camaçari",
+    "descricao": "Lote com vegetação e possível criadouro de mosquito",
+    "latitude": -12.7100,
+    "longitude": -38.3400,
+    "data": "2026-03-08",
+    "status": "Aberta"
+  },
+  {
+    "id": 9,
+    "tipo": "Obra irregular",
+    "bairro": "Nova Camaçari",
+    "descricao": "Casa sendo construída em lote não regularizado",
+    "latitude": -12.7120,
+    "longitude": -38.3420,
+    "data": "2026-02-28",
+    "status": "Em análise"
+  },
+  {
+    "id": 10,
+    "tipo": "Descarte irregular de lixo",
+    "bairro": "Nova Camaçari",
+    "descricao": "Pneus e resíduos sólidos descartados em rua",
+    "latitude": -12.7085,
+    "longitude": -38.3385,
+    "data": "2026-03-17",
+    "status": "Aberta"
+  },
+  {
+    "id": 11,
+    "tipo": "Poluição sonora",
+    "bairro": "Monte Gordo",
+    "descricao": "Evento com som ao vivo sem autorização",
+    "latitude": -12.6800,
+    "longitude": -38.2950,
+    "data": "2026-03-20",
+    "status": "Aberta"
+  },
+  {
+    "id": 12,
+    "tipo": "Ocupação irregular",
+    "bairro": "Monte Gordo",
+    "descricao": "Quiosques irregulares na faixa de praia",
+    "latitude": -12.6780,
+    "longitude": -38.2930,
+    "data": "2026-01-30",
+    "status": "Em análise"
+  },
+  {
+    "id": 13,
+    "tipo": "Obra irregular",
+    "bairro": "Monte Gordo",
+    "descricao": "Muro construído sobre calçada pública",
+    "latitude": -12.6820,
+    "longitude": -38.2970,
+    "data": "2026-02-14",
+    "status": "Encerrada"
+  },
+  {
+    "id": 14,
+    "tipo": "Terreno abandonado",
+    "bairro": "Centro",
+    "descricao": "Imóvel abandonado com risco de desabamento",
+    "latitude": -12.6995,
+    "longitude": -38.3210,
+    "data": "2026-03-05",
+    "status": "Em análise"
+  },
+  {
+    "id": 15,
+    "tipo": "Descarte irregular de lixo",
+    "bairro": "Portão",
+    "descricao": "Resíduos de construção jogados em córrego",
+    "latitude": -12.7200,
+    "longitude": -38.3500,
+    "data": "2026-02-10",
+    "status": "Encerrada"
+  },
+  {
+    "id": 16,
+    "tipo": "Obra irregular",
+    "bairro": "Portão",
+    "descricao": "Puxado construído sem alvará",
+    "latitude": -12.7220,
+    "longitude": -38.3520,
+    "data": "2026-03-12",
+    "status": "Aberta"
+  },
+  {
+    "id": 17,
+    "tipo": "Poluição sonora",
+    "bairro": "Portão",
+    "descricao": "Empresa com maquinário barulhento durante a madrugada",
+    "latitude": -12.7215,
+    "longitude": -38.3490,
+    "data": "2026-03-25",
+    "status": "Aberta"
+  },
+  {
+    "id": 18,
+    "tipo": "Ocupação irregular",
+    "bairro": "Miragem",
+    "descricao": "Instalação comercial em área residencial sem licença",
+    "latitude": -12.7040,
+    "longitude": -38.3310,
+    "data": "2026-01-22",
+    "status": "Em análise"
+  },
+  {
+    "id": 19,
+    "tipo": "Terreno abandonado",
+    "bairro": "Abrantes",
+    "descricao": "Área cercada com vegetação densa e lixo acumulado",
+    "latitude": -12.6860,
+    "longitude": -38.3060,
+    "data": "2026-02-18",
+    "status": "Aberta"
+  },
+  {
+    "id": 20,
+    "tipo": "Descarte irregular de lixo",
+    "bairro": "Centro",
+    "descricao": "Lixo doméstico em horário irregular",
+    "latitude": -12.6960,
+    "longitude": -38.3270,
+    "data": "2026-03-28",
+    "status": "Aberta"
+  },
+  {
+    "id": 21,
+    "tipo": "Obra irregular",
+    "bairro": "Nova Camaçari",
+    "descricao": "Construção de muro em área pública",
+    "latitude": -12.7140,
+    "longitude": -38.3440,
+    "data": "2026-03-02",
+    "status": "Em análise"
+  },
+  {
+    "id": 22,
+    "tipo": "Poluição sonora",
+    "bairro": "Monte Gordo",
+    "descricao": "Pousada com festas frequentes",
+    "latitude": -12.6760,
+    "longitude": -38.2910,
+    "data": "2026-02-25",
+    "status": "Aberta"
+  },
+  {
+    "id": 23,
+    "tipo": "Ocupação irregular",
+    "bairro": "Portão",
+    "descricao": "Depósito de sucata em área residencial",
+    "latitude": -12.7180,
+    "longitude": -38.3510,
+    "data": "2026-03-09",
+    "status": "Aberta"
+  },
+  {
+    "id": 24,
+    "tipo": "Terreno abandonado",
+    "bairro": "Monte Gordo",
+    "descricao": "Lote sem cerca com animais soltos",
+    "latitude": -12.6840,
+    "longitude": -38.2990,
+    "data": "2026-01-15",
+    "status": "Encerrada"
+  },
+  {
+    "id": 25,
+    "tipo": "Descarte irregular de lixo",
+    "bairro": "Miragem",
+    "descricao": "Descarte de óleo de cozinha em bueiro",
+    "latitude": -12.7055,
+    "longitude": -38.3295,
+    "data": "2026-03-30",
+    "status": "Aberta"
+  }
+]
