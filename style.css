@@ -1,6 +1,7 @@
 /* ==============================================
    Camaçari na Mão — PoC de Visualização Territorial
    Estilo principal da interface
+   v2: adicionado painel-direito, #insights, #ante-depois
    ============================================== */
 
 /* Reset básico */
@@ -108,7 +109,7 @@ header {
   overflow: hidden;
 }
 
-/* ---- PAINEL LATERAL (insights) ---- */
+/* ---- PAINEL LATERAL ESQUERDO (insights originais) ---- */
 .painel-lateral {
   width: 260px;
   background: white;
@@ -129,6 +130,172 @@ header {
   border-bottom: 2px solid #e8f5ec;
   padding-bottom: 6px;
   font-weight: 700;
+}
+
+/* ---- NOVO v2: PAINEL LATERAL DIREITO (insights SISSEDUR + ante/depois) ---- */
+.painel-direito {
+  width: 270px;
+  background: #fafafa;
+  padding: 14px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 1px solid #eee;
+}
+
+.painel-direito h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a3a6c;
+  border-bottom: 2px solid #e0e8f5;
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+
+/* ---- #insights: contagem por tipo (NOVO v2) ---- */
+.insights-titulo {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a3a6c;
+  margin-bottom: 2px;
+}
+
+.insights-subtitulo {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.insights-linha {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 8px;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  border: 1px solid #eef;
+  font-size: 12px;
+  transition: background 0.15s;
+}
+
+.insights-linha:hover {
+  background: #f0f4ff;
+}
+
+.insights-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(0,0,0,0.1);
+}
+
+.insights-nome {
+  flex: 1;
+  color: #444;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.insights-pct {
+  font-size: 11px;
+  color: #888;
+  font-weight: 600;
+  min-width: 32px;
+  text-align: right;
+}
+
+.insights-num {
+  background: #1a3a6c;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 10px;
+  min-width: 26px;
+  text-align: center;
+}
+
+/* ---- #ante-depois: bloco visual ETL (NOVO v2) ---- */
+.ad-bloco {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+
+.ad-label {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ad-label span {
+  font-weight: 400;
+  text-transform: none;
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.ad-label-antes {
+  background: #fff3cd;
+  color: #7a5200;
+  border-bottom: 1px solid #fce08a;
+}
+
+.ad-label-depois {
+  background: #d4edda;
+  color: #155724;
+  border-bottom: 1px solid #b8dfc2;
+}
+
+.ad-codigo {
+  padding: 8px 10px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.7;
+  background: #f8f9fa;
+}
+
+.ad-chave {
+  color: #1a3a6c;
+  font-weight: 600;
+}
+
+.ad-val-str {
+  color: #c0392b;
+}
+
+.ad-val-num {
+  color: #16a085;
+  font-weight: 600;
+}
+
+.ad-val-null {
+  color: #999;
+  font-style: italic;
+}
+
+.ad-seta {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a3a6c;
+  background: #e8edf8;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 4px 0;
+  font-family: monospace;
 }
 
 /* Card de resumo total */
@@ -301,9 +468,15 @@ header {
 .status-encerrada { background: #d4edda; color: #155724; }
 
 /* ---- RESPONSIVO ---- */
+@media (max-width: 900px) {
+  .painel-direito {
+    display: none; /* Oculta painel direito em telas médias */
+  }
+}
+
 @media (max-width: 700px) {
   .painel-lateral {
-    display: none; /* Oculta painel em telas pequenas */
+    display: none;
   }
 
   header {

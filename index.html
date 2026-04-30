@@ -6,9 +6,15 @@
   <title>Camaçari na Mão — PoC Visualização Territorial</title>
 
   <!--
-    PoC — Camaçari na Mão
+    PoC — Camaçari na Mão v2
+    Pipeline SISSEDUR → Transformação → Visualização
     Plataforma de Apoio à SEDUR | Camaçari, BA, 2026
-    Desenvolvido como prova de conceito de visualização georreferenciada de denúncias urbanas.
+
+    ATUALIZAÇÃO v2:
+    - Ingestão de dados_brutos.json (simulação SISSEDUR)
+    - Transformação via transformador.js (ETL sem backend)
+    - Painel de insights (#insights) com contagem por tipo
+    - Bloco visual ANTES/DEPOIS da transformação (#ante-depois)
   -->
 
   <!-- Leaflet CSS (mapa base) -->
@@ -30,7 +36,7 @@
     crossorigin=""
   />
 
-  <!-- Estilos próprios da PoC -->
+  <!-- Estilos da PoC (inclui novos estilos v2) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -40,39 +46,34 @@
   ============================================== -->
   <header>
 
-    <!-- Identidade do app -->
     <div class="header-title">
       <div class="logo">🗺️</div>
       <h1>
         Camaçari na Mão
-        <span>PoC · Visualização de Denúncias Urbanas · SEDUR</span>
+        <span>PoC · Pipeline SISSEDUR → Visualização Territorial · SEDUR</span>
       </h1>
     </div>
 
-    <!-- Filtro por tipo de denúncia -->
     <div class="filter-bar">
       <label for="filtro-tipo">Filtrar por tipo:</label>
       <select id="filtro-tipo">
         <option value="">Todos os tipos</option>
-        <!-- Preenchido dinamicamente pelo script.js -->
       </select>
     </div>
 
-    <!-- Contador de ocorrências exibidas -->
     <div id="contador-resultados">Carregando...</div>
 
   </header>
 
 
   <!-- =============================================
-       LAYOUT PRINCIPAL: PAINEL + MAPA
+       LAYOUT PRINCIPAL: PAINEL + MAPA + PAINEL-DIREITO
   ============================================== -->
   <div class="main-layout">
 
-    <!-- Painel lateral de insights -->
+    <!-- ── PAINEL LATERAL ESQUERDO (insights originais) ── -->
     <aside class="painel-lateral">
 
-      <!-- Card: total geral -->
       <div>
         <h2>📊 Resumo Geral</h2>
         <div class="card-total" style="margin-top: 8px;">
@@ -81,39 +82,67 @@
         </div>
       </div>
 
-      <!-- Insight: contagem por tipo -->
       <div>
         <h2>📌 Por Tipo de Denúncia</h2>
         <div id="insight-tipos" style="display: flex; flex-direction: column; gap: 6px; margin-top: 6px;">
-          <!-- Preenchido dinamicamente pelo script.js -->
         </div>
       </div>
 
-      <!-- Insight: contagem por bairro -->
       <div>
         <h2>🏘️ Por Bairro</h2>
         <div id="insight-bairros" style="display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
-          <!-- Preenchido dinamicamente pelo script.js -->
         </div>
       </div>
 
-      <!-- Legenda de cores -->
       <div>
         <h2>🔵 Legenda</h2>
         <div id="legenda-cores" style="display: flex; flex-direction: column; gap: 4px; margin-top: 6px;">
-          <!-- Preenchido dinamicamente pelo script.js -->
         </div>
       </div>
 
-      <!-- Rodapé do painel -->
       <div style="font-size: 10px; color: #aaa; text-align: center; padding-top: 6px; border-top: 1px solid #eee; margin-top: auto;">
-        Dados simulados · PoC 2026<br>Prefeitura de Camaçari / SEDUR
+        Pipeline SISSEDUR · PoC 2026<br>Prefeitura de Camaçari / SEDUR
       </div>
 
     </aside>
 
-    <!-- Mapa principal (Leaflet renderiza aqui) -->
+    <!-- ── MAPA PRINCIPAL ── -->
     <div id="map"></div>
+
+    <!-- ── NOVO: PAINEL LATERAL DIREITO (v2) ── -->
+    <!--
+      ADIÇÃO v2: Painel direito com dois blocos:
+        1. #insights      — contagem por tipo (requisito do briefing)
+        2. #ante-depois   — demonstração visual da transformação ETL
+    -->
+    <aside class="painel-direito">
+
+      <!-- BLOCO 1: Painel de Insights por Tipo -->
+      <div>
+        <h2>📡 Insights SISSEDUR</h2>
+        <div id="insights" style="margin-top: 8px;">
+          <!-- Preenchido dinamicamente por script.js → atualizarInsights() -->
+          <div style="font-size:12px; color:#aaa; text-align:center; padding:12px 0;">Carregando...</div>
+        </div>
+      </div>
+
+      <!-- BLOCO 2: Demonstração ANTES → DEPOIS da transformação -->
+      <div>
+        <h2>🔄 ETL: Antes → Depois</h2>
+        <p style="font-size:11px; color:#888; margin: 4px 0 8px; line-height:1.4;">
+          Exemplo real de transformação do dado bruto do SISSEDUR em registro georreferenciado.
+        </p>
+        <div id="ante-depois">
+          <!-- Preenchido dinamicamente por script.js → renderizarAnteDepois() -->
+          <div style="font-size:12px; color:#aaa; text-align:center; padding:12px 0;">Carregando...</div>
+        </div>
+      </div>
+
+      <div style="font-size: 10px; color: #aaa; text-align: center; padding-top: 6px; border-top: 1px solid #eee; margin-top: auto;">
+        transformador.js · geocodificação interna<br>sem backend · sem API key
+      </div>
+
+    </aside>
 
   </div>
 
@@ -122,19 +151,20 @@
        SCRIPTS (carregados ao final)
   ============================================== -->
 
-  <!-- Leaflet JS (biblioteca de mapas) -->
   <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     crossorigin=""
   ></script>
 
-  <!-- MarkerCluster JS (agrupamento de pontos) -->
   <script
     src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
     crossorigin=""
   ></script>
 
-  <!-- Lógica principal da PoC -->
+  <!-- NOVO v2: Módulo de transformação (deve ser carregado ANTES do script.js) -->
+  <script src="transformador.js"></script>
+
+  <!-- Lógica principal (atualizada para usar o pipeline) -->
   <script src="script.js"></script>
 
 </body>

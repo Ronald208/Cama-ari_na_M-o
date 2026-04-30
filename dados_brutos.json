@@ -1,0 +1,138 @@
+[
+  {
+    "id_sissedur": "SIS-2026-001",
+    "descricao": "Construção de muro sem recuo obrigatório",
+    "endereco": "Rua Sete de Setembro, 142 - Centro, Camaçari",
+    "categoria": "Obra irregular",
+    "data_registro": "2026-04-01",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-002",
+    "descricao": "Som automotivo em volume acima do permitido",
+    "endereco": "Av. Luís Eduardo Magalhães, 980 - Phoc II, Camaçari",
+    "categoria": "Poluição sonora",
+    "data_registro": "2026-04-02",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-003",
+    "descricao": "Lote sem cercamento com entulho e animais",
+    "endereco": "Rua das Araras, 55 - Gleba C, Camaçari",
+    "categoria": "Terreno abandonado",
+    "data_registro": "2026-04-03",
+    "status": "Em análise"
+  },
+  {
+    "id_sissedur": "SIS-2026-004",
+    "descricao": "Resíduos industriais descartados em via pública",
+    "endereco": "Rua do Polo, 230 - Polo Industrial, Camaçari",
+    "categoria": "Descarte irregular de lixo",
+    "data_registro": "2026-04-04",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-005",
+    "descricao": "Churrasqueira instalada sobre calçada pública",
+    "endereco": "Rua da Praia, 10 - Arembepe, Camaçari",
+    "categoria": "Ocupação irregular",
+    "data_registro": "2026-04-05",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-006",
+    "descricao": "Puxado de alvenaria sem projeto aprovado",
+    "endereco": "Rua Dois, 78 - Phoc II, Camaçari",
+    "categoria": "Obra irregular",
+    "data_registro": "2026-04-06",
+    "status": "Em análise"
+  },
+  {
+    "id_sissedur": "SIS-2026-007",
+    "descricao": "Bar com aparelho de som após as 22h",
+    "endereco": "Praça da Bandeira, s/n - Centro, Camaçari",
+    "categoria": "Poluição sonora",
+    "data_registro": "2026-04-07",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-008",
+    "descricao": "Imóvel com fachada deteriorada e mato alto",
+    "endereco": "Rua Bela Vista, 300 - Gleba C, Camaçari",
+    "categoria": "Terreno abandonado",
+    "data_registro": "2026-04-08",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-009",
+    "descricao": "Pneus velhos descartados próximo à escola",
+    "endereco": "Rua Vinte e Três, 15 - Polo Industrial, Camaçari",
+    "categoria": "Descarte irregular de lixo",
+    "data_registro": "2026-04-09",
+    "status": "Encerrada"
+  },
+  {
+    "id_sissedur": "SIS-2026-010",
+    "descricao": "Barraca comercial fixada em área verde municipal",
+    "endereco": "Av. Beira Mar, 500 - Arembepe, Camaçari",
+    "categoria": "Ocupação irregular",
+    "data_registro": "2026-04-10",
+    "status": "Em análise"
+  },
+  {
+    "id_sissedur": "SIS-2026-011",
+    "descricao": "Terraço construído sem aprovação da prefeitura",
+    "endereco": "Rua Quinze, 88 - Phoc II, Camaçari",
+    "categoria": "Obra irregular",
+    "data_registro": "2026-04-11",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-012",
+    "descricao": "Oficina mecânica operando às 23h com gerador",
+    "endereco": "Estrada do Coco, 1200 - Gleba C, Camaçari",
+    "categoria": "Poluição sonora",
+    "data_registro": "2026-04-12",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-013",
+    "descricao": "Galpão abandonado com risco de colapso",
+    "endereco": "Rua do Polo, 99 - Polo Industrial, Camaçari",
+    "categoria": "Terreno abandonado",
+    "data_registro": "2026-04-13",
+    "status": "Em análise"
+  },
+  {
+    "id_sissedur": "SIS-2026-014",
+    "descricao": "Óleo de motor descartado em bueiro da esquina",
+    "endereco": "Rua das Margaridas, 22 - Centro, Camaçari",
+    "categoria": "Descarte irregular de lixo",
+    "data_registro": "2026-04-14",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-015",
+    "descricao": "Estacionamento clandestino em calçada pública",
+    "endereco": "Rua da Prainha, 3 - Arembepe, Camaçari",
+    "categoria": "Ocupação irregular",
+    "data_registro": "2026-04-15",
+    "status": "Aberta"
+  },
+  {
+    "id_sissedur": "SIS-2026-016",
+    "descricao": "Antena de telecomunicações sem licença municipal",
+    "endereco": "Rua Três, 200 - Phoc II, Camaçari",
+    "categoria": "Obra irregular",
+    "data_registro": "2026-04-16",
+    "status": "Em análise"
+  },
+  {
+    "id_sissedur": "SIS-2026-017",
+    "descricao": "Música ao vivo em bar sem alvará para entretenimento",
+    "endereco": "Rua do Centro, 45 - Centro, Camaçari",
+    "categoria": "Poluição sonora",
+    "data_registro": "2026-04-17",
+    "status": "Encerrada"
+  }
+]
